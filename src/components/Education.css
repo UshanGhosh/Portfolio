@@ -1,0 +1,163 @@
+.education {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #222831 0%, #393E46 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.education-grid {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    gap: 30px; /* Proper spacing between cards */
+    margin-top: 30px;
+    width: 100%;
+}
+
+.education-card {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid rgba(0, 173, 181, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    width: 80%;
+    max-width: 800px;
+    justify-content: space-between; /* Spacing between elements */
+    margin-bottom: 20px; /* Ensures space between cards */
+}
+
+/* Glowing border effect */
+.education-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00ADB5, transparent, #00ADB5);
+    border-radius: 16px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Shine effect */
+.education-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 30px rgba(0, 173, 181, 0.2);
+}
+
+.education-card:hover::before {
+    opacity: 0.5;
+}
+
+.education-card:hover::after {
+    left: 100%;
+}
+
+/* Logo styling */
+.education-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-right: 20px;
+}
+
+/* Text content */
+.education-details {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.education-title {
+    color: #00ADB5;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.education-institution,
+.education-year {
+    font-size: 1rem;
+    color: #EEEEEE; /* Matched Skills section white text */
+    font-family: 'Roboto', sans-serif; /* Same font as Skills */
+}
+
+/* Graduation cap icon */
+.education-icon {
+    font-size: 2rem;
+    color: #FFD700;
+    margin-left: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .education {
+        padding: 40px 15px;
+    }
+
+    .education-grid {
+        gap: 20px; /* Adjust spacing for smaller screens */
+    }
+
+    .education-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .education-logo {
+        margin: 0 0 10px 0;
+    }
+
+    .education-icon {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.education-card {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.education-card:nth-child(1) { animation-delay: 0.1s; }
+.education-card:nth-child(2) { animation-delay: 0.2s; }

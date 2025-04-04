@@ -1,0 +1,100 @@
+/* Create a shared CSS file for common styles */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    margin-bottom: 60px;
+}
+
+/* Main section title (h2) styling */
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem !important;
+    color: #00ADB5;
+    text-align: center;
+    margin-bottom: 5rem;
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 100px;
+    height: 3px;
+    background: #00ADB5;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.section-title:hover::after {
+    width: 100%;
+}
+
+/* Sub-section title (h3) styling */
+.sub-section-title {
+    font-size: 2rem;
+    color: #FFFFFF;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.sub-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 60px;
+    height: 3px;
+    background: #00ADB5;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.sub-section-title:hover::after {
+    width: 100%;
+}
+
+/* Title container for centering */
+.title-container {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Adjust this value to match headerOffset */
+}
+
+/* Add styles for content */
+.about-content, 
+.skills-content,
+.projects-content,
+.achievements-content,
+.contact-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #FFFFFF;
+    margin-bottom: 3rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section-container {
+        padding: 40px 15px;
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        margin-bottom: 3.5rem;
+    }
+
+    .sub-section-title {
+        font-size: 1.75rem;
+    }
+} 

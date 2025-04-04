@@ -1,0 +1,260 @@
+.achievements {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #222831 0%, #393E46 100%);
+    min-height: auto;
+    position: relative;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.achievement-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid rgba(0, 173, 181, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00ADB5, transparent, #00ADB5);
+    border-radius: 16px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 30px rgba(0, 173, 181, 0.2);
+}
+
+.achievement-card:hover::before {
+    opacity: 0.5;
+}
+
+.achievement-title {
+    color: #00ADB5;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    display: inline-block;
+}
+
+.achievement-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.achievement-items li {
+    color: #EEEEEE;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.achievement-items li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #00ADB5;
+    font-size: 1.2rem;
+}
+
+.achievement-card:hover .achievement-items li {
+    color: #FFFFFF;
+    transform: translateX(5px);
+}
+
+/* Add these new styles for highlighting positions */
+.achievement-items li .highlight {
+    color: #00ADB5;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+.achievement-items li .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(0, 173, 181, 0.3);
+    transition: all 0.3s ease;
+}
+
+.achievement-items li:hover .highlight::after {
+    height: 3px;
+    background: rgba(0, 173, 181, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .achievements {
+        padding: 40px 15px;
+    }
+
+    .achievements-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .achievement-card {
+        padding: 20px;
+    }
+}
+
+/* Add these styles for coding profiles */
+.coding-profiles {
+    margin-top: 50px;
+}
+
+.coding-profiles h3 {
+    color: #FFFFFF;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.profile-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 173, 181, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.platform-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.problem-count-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.profile-card:hover .platform-logo,
+.profile-card:hover .problem-count-logo {
+    transform: scale(1.1);
+}
+
+.profile-card h4 {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.rank {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.problems-count {
+    font-size: 2.5rem;
+}
+
+.percentile {
+    color: #EEEEEE;
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.problem-description {
+    color: #EEEEEE;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.problem-subdescription {
+    color: #EEEEEE;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.handle-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border: 1px solid;
+    border-radius: 20px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.handle-text {
+    font-size: 0.9rem;
+    margin-right: 8px;
+}
+
+.link-arrow {
+    color: #FFFFFF;
+    transition: transform 0.3s ease;
+}
+
+.handle-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.handle-link:hover .link-arrow {
+    transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .profile-card {
+        padding: 20px;
+    }
+} 

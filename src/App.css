@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+}
+
+.App h1:not(.logo), 
+.App h2 {
+  margin: 20px 0;
+}

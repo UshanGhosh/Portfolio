@@ -1,0 +1,126 @@
+.online-profiles {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #222831 0%, #393E46 100%);
+    min-height: auto;
+    position: relative;
+}
+
+.profile-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 173, 181, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.platform-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.problem-count-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.profile-card:hover .platform-logo,
+.profile-card:hover .problem-count-logo {
+    transform: scale(1.1);
+}
+
+.profile-card h4 {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.rank {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.problems-count {
+    font-size: 2.5rem;
+}
+
+.percentile {
+    color: #EEEEEE;
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.problem-description {
+    color: #EEEEEE;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.problem-subdescription {
+    color: #EEEEEE;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.handle-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border: 1px solid;
+    border-radius: 20px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.handle-text {
+    font-size: 0.9rem;
+    margin-right: 8px;
+}
+
+.link-arrow {
+    color: #FFFFFF;
+    transition: transform 0.3s ease;
+}
+
+.handle-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.handle-link:hover .link-arrow {
+    transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .profile-card {
+        padding: 20px;
+    }
+} 
