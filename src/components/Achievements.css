@@ -14,11 +14,11 @@
 
 .achievement-card {
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 25px;
+    transition: all 0.3s ease;
     border: 1px solid rgba(0, 173, 181, 0.1);
     backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
 }
@@ -26,25 +26,23 @@
 .achievement-card::before {
     content: '';
     position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, #00ADB5, transparent, #00ADB5);
-    border-radius: 16px;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(0, 173, 181, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
 }
 
 .achievement-card:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 15px 30px rgba(0, 173, 181, 0.2);
+    border-color: rgba(0, 173, 181, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .achievement-card:hover::before {
-    opacity: 0.5;
+    transform: translateX(100%);
 }
 
 .achievement-title {
@@ -54,6 +52,21 @@
     font-family: 'Poppins', sans-serif;
     position: relative;
     display: inline-block;
+}
+
+.achievement-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #00ADB5;
+    transition: width 0.3s ease;
+}
+
+.achievement-card:hover .achievement-title::after {
+    width: 100%;
 }
 
 .achievement-items {
