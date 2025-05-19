@@ -1,53 +1,51 @@
 import React from 'react';
 import './Skills.css';
 import '../components/shared.css';
-import { DiPython, DiJava, DiJavascript1, DiReact, DiMongodb, DiMysql, DiGit, DiDocker } from 'react-icons/di';
-import { SiTypescript, SiFastapi, SiExpress, SiNextdotjs, SiCplusplus } from 'react-icons/si';
 
 function Skills() {
   const skillsList = [
     {
       label: "Languages",
       items: [
-        { name: "C/C++", icon: <SiCplusplus style={{color: '#00599C'}} /> },
-        { name: "Python", icon: <DiPython style={{color: '#3776AB'}} /> },
-        { name: "Java", icon: <DiJava style={{color: '#007396'}} /> },
-        { name: "JavaScript", icon: <DiJavascript1 style={{color: '#F7DF1E'}} /> },
-        { name: "TypeScript", icon: <SiTypescript style={{color: '#3178C6'}} /> }
+        { name: "C/C++", icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" className="skill-icon-img" /> },
+        { name: "Python", icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" className="skill-icon-img" /> },
+        { name: "Java", icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" className="skill-icon-img" /> },
+        { name: "JavaScript", icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" className="skill-icon-img" /> },
+        { name: "TypeScript", icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" className="skill-icon-img" /> }
       ]
     },
     {
       label: "Frameworks",
       items: [
-        { name: "FastAPI", icon: <SiFastapi style={{color: '#009688'}} /> },
-        { name: "Express.js", icon: <SiExpress style={{color: '#000000'}} /> },
-        { name: "React", icon: <DiReact style={{color: '#61DAFB'}} /> },
-        { name: "Next.js", icon: <SiNextdotjs style={{color: '#000000'}} /> }
+        { name: "Express.js", icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" className="skill-icon-img" /> },
+        { name: "FastAPI", icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" className="skill-icon-img" /> },
+        { name: "React", icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="skill-icon-img" /> },
+        { name: "Next.js", icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" className="skill-icon-img" /> }
       ]
     },
     {
       label: "Databases",
       items: [
-        { name: "MySQL", icon: <DiMysql style={{color: '#4479A1'}} /> },
-        { name: "MongoDB", icon: <DiMongodb style={{color: '#47A248'}} /> }
+        { name: "MySQL", icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" className="skill-icon-img" /> },
+        { name: "MongoDB", icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" className="skill-icon-img" /> }
       ]
     },
     {
       label: "DevOps",
       items: [
-        { name: "Git", icon: <DiGit style={{color: '#F05032'}} /> },
-        { name: "Docker", icon: <DiDocker style={{color: '#2496ED'}} /> }
+        { name: "Git", icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" className="skill-icon-img" /> },
+        { name: "Docker", icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" className="skill-icon-img" /> }
       ]
     }
   ];
 
   return (
-    <section id ="skills-section" className="skills">
+    <section id="skills-section" className="skills">
       <div className="section-container">
         <div className="title-container">
           <h2 className="section-title">Technical Skills</h2>
         </div>
-        
+
         <div className="skills-grid">
           {skillsList.map((category, index) => (
             <div className="skill-card" key={index}>
@@ -68,4 +66,4 @@ function Skills() {
   );
 }
 
-export default Skills; 
+export default Skills;

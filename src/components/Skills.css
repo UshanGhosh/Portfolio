@@ -92,10 +92,21 @@
     align-items: center;
 }
 
-.skill-icon svg {
-    /* Remove any color inheritance */
+/* Remove any color inheritance */
+/* .skill-icon svg {
     fill: currentColor !important;
     color: inherit !important;
+} */
+
+.skill-icon {
+    display: flex;
+    align-items: center;
+}
+
+.skill-icon-img {
+    height: 1em;
+    width: auto;
+    display: inline-block;
 }
 
 /* Keep text color white but don't affect icons */
